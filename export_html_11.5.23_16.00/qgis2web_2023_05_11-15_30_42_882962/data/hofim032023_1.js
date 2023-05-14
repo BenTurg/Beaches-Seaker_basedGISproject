@@ -4,6 +4,7 @@ var json_hofim032023_1 = {
   crs: { type: "name", properties: { name: "urn:ogc:def:crs:OGC:1.3:CRS84" } },
   features: [
     {
+      //type: "module",//just for testing!!!!
       type: "Feature",
       properties: {
         AZIMUTH: "284",
@@ -12322,3 +12323,9 @@ var json_hofim032023_1 = {
     },
   ],
 };
+
+json_hofim032023_1.features.forEach((hof) => {
+    if (hof.properties.HOF === "חוף פלמחים") {
+      hof.properties.beaches_water_temp = 999;
+    }
+  });
