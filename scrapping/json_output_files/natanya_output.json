@@ -1,0 +1,65 @@
+[
+  {
+    "date": "היום    23/05/2023"
+  },
+  {
+    "temp": "23°",
+    "height": "50 - 80",
+    "waves_height": "ברך",
+    "waves_dire": "דרום מערבית"
+  },
+  {
+    "temp": "25°",
+    "height": "30 - 40",
+    "waves_height": "ים נוח",
+    "waves_dire": "צפון מערבית"
+  },
+  {
+    "temp": "24°",
+    "height": "30 - 50",
+    "waves_height": "ים גלי",
+    "waves_dire": "צפון מערבית"
+  },
+  {
+    "temp": "24°",
+    "height": "20",
+    "waves_height": "ים נוח",
+    "waves_dire": "צפון מערבית"
+  },
+  {
+    "temp": "33°",
+    "height": "פלטה",
+    "waves_height": "פלטה",
+    "waves_dire": "צפון מזרחית"
+  },
+  {
+    "temp": "24°",
+    "height": "40 - 60",
+    "waves_height": "ים גלי",
+    "waves_dire": "מערבית"
+  },
+  {
+    "temp": "23°",
+    "height": "70 - 110",
+    "waves_height": "מותן",
+    "waves_dire": "מערבית"
+  },
+  {
+    "temp": "24°",
+    "height": "40 - 70",
+    "waves_height": "קרסול",
+    "waves_dire": "צפון מערבית"
+  },
+  {
+    "temp": "25°",
+    "height": "30 - 50",
+    "waves_height": "ים גלי",
+    "waves_dire": "צפונית"
+  },
+  {
+    "temp": "29°",
+    "height": "20 - 30",
+    "waves_height": "ים נוח",
+    "waves_dire": "מערבית"
+  }
+]
