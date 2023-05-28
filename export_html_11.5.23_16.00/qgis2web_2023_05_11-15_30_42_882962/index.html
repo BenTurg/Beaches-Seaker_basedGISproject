@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Seaker</title>
-        <!-- <script src="firstWeb.js"></script> -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
@@ -12,75 +10,13 @@
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <style>
         #map {
-            width: 1517px;
+            width: 1212px;
             height: 856px;
         }
-        /* Style the header with a grey background and some padding */
-        .header {
-          overflow: hidden;
-          background-color: #f1f1f1;
-          padding: 20px 10px;
-        }
-
-        /* Style the header links */
-        .header a {
-          float: left;
-          color: black;
-          text-align: center;
-          padding: 12px;
-          text-decoration: none;
-          font-size: 18px;
-          line-height: 25px;
-          border-radius: 4px;
-        }
-
-        /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-        .header a.logo {
-          font-size: 25px;
-          font-weight: bold;
-        }
-
-        /* Change the background color on mouse-over */
-        .header a:hover {
-          background-color: #ddd;
-          color: black;
-        }
-
-        /* Style the active/current link*/
-        .header a.active {
-          background-color: dodgerblue;
-          color: white;
-        }
-
-        /* Float the link section to the right */
-        .header-right {
-          float: right;
-        }
-
-        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-        @media screen and (max-width: 500px) {
-          .header a {
-            float: none;
-            display: block;
-            text-align: left;
-          }
-          .header-right {
-            float: none;
-          }
-        }
         </style>
+        <title></title>
     </head>
     <body>
-        <div class="header">
-            <a href="#default" class="logo">
-                <img src="img/Logo.jpeg" alt="logo" width="50" height="50">
-            </a>
-            <div class="header-right">
-              <a class="active" href="#home">Home</a>
-              <a href="#contact">Contact</a>
-              <a href="#about">About</a>
-            </div>
-          </div>
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
@@ -92,13 +28,11 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/testing_file_Ben.js"></script>
         <script src="data/hofim032023_1.js"></script>
-        <script src="data/gis_osm_waterways_free_1_2.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[32.42961304919554,34.837399020053326],[32.48163385674505,34.929684176303326]]);
+        }).fitBounds([[32.81198906667123,35.00831723092625],[32.84455581189334,35.05445980905125]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -120,90 +54,89 @@
         map.addLayer(layer_OSMStandard_0);
         function pop_hofim032023_1(feature, layer) {
             var popupContent = '<table>\
-                ' + (feature.properties['AZIMUTH'] !== null ? '<tr>\
-                    <th scope="row">אזימוט</th>\
-                    <td>' + autolinker.link(feature.properties['AZIMUTH'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['MAHOZ'] !== null ? '<tr>\
-                    <th scope="row">מחוז</th>\
-                    <td>' + autolinker.link(feature.properties['MAHOZ'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['OMEK'] !== null ? '<tr>\
-                    <th scope="row">עומק</th>\
-                    <td>' + autolinker.link(feature.properties['OMEK'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['LENGTH'] !== null ? '<tr>\
-                    <th scope="row">אורך</th>\
-                    <td>' + autolinker.link(feature.properties['LENGTH'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['SEA'] !== null ? '<tr>\
-                    <th scope="row">ים</th>\
-                    <td>' + autolinker.link(feature.properties['SEA'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['MUTAR'] !== null ? '<tr>\
-                    <th scope="row">מותר לרחצה</th>\
-                    <td>' + autolinker.link(feature.properties['MUTAR'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['HOF'] !== null ? '<tr>\
-                    <th scope="row">חוף</th>\
-                    <td>' + autolinker.link(feature.properties['HOF'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['CITY'] !== null ? '<tr>\
-                    <th scope="row">עיר</th>\
-                    <td>' + autolinker.link(feature.properties['CITY'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_safeguard'] !== null ? '<tr>\
-                    <th scope="row">מציל</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_safeguard'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_declared'] !== null ? '<tr>\
-                    <th scope="row">מוכרז</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_declared'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_reserved'] !== null ? '<tr>\
-                    <th scope="row">שמורה</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_reserved'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_fishing'] !== null ? '<tr>\
-                    <th scope="row">דייג</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_fishing'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_free_parking'] !== null ? '<tr>\
-                    <th scope="row">חנייה חינם</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_free_parking'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_broadcast'] !== null ? '<tr>\
-                    <th scope="row">מצלמת חוף</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_broadcast'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_wave_height'] !== null ? '<tr>\
-                    <th scope="row">גובה גלים</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_wave_height'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_water_temp'] !== null ? '<tr>\
-                    <th scope="row">טמפרטורת מים</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_water_temp'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_wind_direction'] !== null ? '<tr>\
-                    <th scope="row">כיוון הרוח</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_wind_direction'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_extra'] !== null ? '<tr>\
-                    <th scope="row">הערות</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_extra'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_accessibility'] !== null ? '<tr>\
-                    <th scope="row">נגישות</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_accessibility'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
-                ' + (feature.properties['beaches_rating'] !== null ? '<tr>\
-                    <th scope="row">דירוג</th>\
-                    <td>' + autolinker.link(feature.properties['beaches_rating'].toLocaleString()) + '</td>\
-                </tr>' : '') + '\
+                    <tr>\
+                        <th scope="row">AZIMUTH</th>\
+                        <td>' + (feature.properties['AZIMUTH'] !== null ? autolinker.link(feature.properties['AZIMUTH'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">MAHOZ</th>\
+                        <td>' + (feature.properties['MAHOZ'] !== null ? autolinker.link(feature.properties['MAHOZ'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">OMEK</th>\
+                        <td>' + (feature.properties['OMEK'] !== null ? autolinker.link(feature.properties['OMEK'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">LENGTH</th>\
+                        <td>' + (feature.properties['LENGTH'] !== null ? autolinker.link(feature.properties['LENGTH'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">SEA</th>\
+                        <td>' + (feature.properties['SEA'] !== null ? autolinker.link(feature.properties['SEA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">MUTAR</th>\
+                        <td>' + (feature.properties['MUTAR'] !== null ? autolinker.link(feature.properties['MUTAR'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">HOF</th>\
+                        <td>' + (feature.properties['HOF'] !== null ? autolinker.link(feature.properties['HOF'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CITY</th>\
+                        <td>' + (feature.properties['CITY'] !== null ? autolinker.link(feature.properties['CITY'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_safeguard</th>\
+                        <td>' + (feature.properties['beaches_safeguard'] !== null ? autolinker.link(feature.properties['beaches_safeguard'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_declared</th>\
+                        <td>' + (feature.properties['beaches_declared'] !== null ? autolinker.link(feature.properties['beaches_declared'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_reserved</th>\
+                        <td>' + (feature.properties['beaches_reserved'] !== null ? autolinker.link(feature.properties['beaches_reserved'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_fishing</th>\
+                        <td>' + (feature.properties['beaches_fishing'] !== null ? autolinker.link(feature.properties['beaches_fishing'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_free_parking</th>\
+                        <td>' + (feature.properties['beaches_free_parking'] !== null ? autolinker.link(feature.properties['beaches_free_parking'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_broadcast</th>\
+                        <td>' + (feature.properties['beaches_broadcast'] !== null ? autolinker.link(feature.properties['beaches_broadcast'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_wave_height</th>\
+                        <td>' + (feature.properties['beaches_wave_height'] !== null ? autolinker.link(feature.properties['beaches_wave_height'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_water_temp</th>\
+                        <td>' + (feature.properties['beaches_water_temp'] !== null ? autolinker.link(feature.properties['beaches_water_temp'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_wind_direction</th>\
+                        <td>' + (feature.properties['beaches_wind_direction'] !== null ? autolinker.link(feature.properties['beaches_wind_direction'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_extra</th>\
+                        <td>' + (feature.properties['beaches_extra'] !== null ? autolinker.link(feature.properties['beaches_extra'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_accessibility</th>\
+                        <td>' + (feature.properties['beaches_accessibility'] !== null ? autolinker.link(feature.properties['beaches_accessibility'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">beaches_rating</th>\
+                        <td>' + (feature.properties['beaches_rating'] !== null ? autolinker.link(feature.properties['beaches_rating'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
-            
             layer.bindPopup(popupContent, {maxHeight: 400});
-        }       
+        }
 
         function style_hofim032023_1_0() {
             return {
@@ -234,67 +167,7 @@
         });
         bounds_group.addLayer(layer_hofim032023_1);
         map.addLayer(layer_hofim032023_1);
-        function pop_gis_osm_waterways_free_1_2(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['osm_id'] !== null ? autolinker.link(feature.properties['osm_id'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['code'] !== null ? autolinker.link(feature.properties['code'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fclass'] !== null ? autolinker.link(feature.properties['fclass'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['width'] !== null ? autolinker.link(feature.properties['width'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_gis_osm_waterways_free_1_2_0() {
-            return {
-                pane: 'pane_gis_osm_waterways_free_1_2',
-                opacity: 1,
-                color: 'rgba(21,118,255,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 1.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_gis_osm_waterways_free_1_2');
-        map.getPane('pane_gis_osm_waterways_free_1_2').style.zIndex = 402;
-        map.getPane('pane_gis_osm_waterways_free_1_2').style['mix-blend-mode'] = 'normal';
-        var layer_gis_osm_waterways_free_1_2 = new L.geoJson(json_gis_osm_waterways_free_1_2, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_gis_osm_waterways_free_1_2',
-            layerName: 'layer_gis_osm_waterways_free_1_2',
-            pane: 'pane_gis_osm_waterways_free_1_2',
-            onEachFeature: pop_gis_osm_waterways_free_1_2,
-            style: style_gis_osm_waterways_free_1_2_0,
-        });
-        bounds_group.addLayer(layer_gis_osm_waterways_free_1_2);
         setBounds();
-        var i = 0;
-        layer_hofim032023_1.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['MAHOZ'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['MAHOZ']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_hofim032023_1'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
         resetLabels([layer_hofim032023_1]);
         map.on("zoomend", function(){
             resetLabels([layer_hofim032023_1]);
