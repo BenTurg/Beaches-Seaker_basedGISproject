@@ -36,10 +36,10 @@ async function scrapedData() {
     };
 
     const reverseArray = {
-      Height: reverseTextDirection(resultArray[0]),
-      Temperature: reverseArrayTemperature(resultArray[2]),
-      WindDirection: reverseTextDirection(resultArray[3]),
-      WindSpeed: reverseTextDirection(resultArray[4]),
+      beaches_wave_height: reverseTextDirection(resultArray[0]),
+      beaches_water_temp: reverseArrayTemperature(resultArray[2]),
+      beaches_wind_direction: reverseTextDirection(resultArray[3]),
+      beaches_extra: reverseTextDirection(resultArray[4]), //beaches_extra is wind speed and wave direction
     };
     // Function to modify Temperature format
     function reverseArrayTemperature(text) {

@@ -1,0 +1,1 @@
+node bat_yam_scrape.js && node herzelia_scrape.js && node natanya_scrape.js && node natanya_scrape.js && node rishon_letzion_scrape.js && node tel_aviv_scrape.js

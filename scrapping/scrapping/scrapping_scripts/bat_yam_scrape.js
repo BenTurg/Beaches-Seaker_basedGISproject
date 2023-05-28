@@ -4,7 +4,7 @@ const fs = require("fs");
 async function scrapeWebsite() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto("https://gosurf.co.il/forecast/rishon-lezion");
+  await page.goto("https://gosurf.co.il/forecast/bat-yam");
 
   const data = [];
 
@@ -77,11 +77,21 @@ async function scrapeWebsite() {
         }
 
         data.push({
-          temp: tempData,
-          height: spanData,
-          waves_height: wavesHeight || null,
-          waves_dire: wavesDire || null,
+          beaches_water_temp: tempData,
+          beaches_wave_height: spanData,
+          beaches_extra: wavesHeight || null,
+          beaches_wind_direction: wavesDire || null,
         });
+
+        var firstElement = data[1];
+
+        // Keep only the desired object
+        var desiredObject = {
+          beaches_water_temp: firstElement.beaches_water_temp,
+          beaches_wave_height: firstElement.beaches_wave_height,
+          beaches_extra: firstElement.beaches_extra,
+          beaches_wind_direction: firstElement.beaches_wind_direction,
+        };
 
         // Check if the current div is the first occurrence of div with class "day fw"
         if (divElement === dayFwDiv) {
@@ -101,8 +111,8 @@ async function scrapeWebsite() {
 
   // Write the data to a JSON file
   fs.writeFileSync(
-    "../json_output_files/rishon_letizon_output.json",
-    JSON.stringify(data, null, 2)
+    "../json_output_files/bat_yam_output.json",
+    JSON.stringify(desiredObject, null, 2)
   );
 
   await browser.close();
