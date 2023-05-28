@@ -1,0 +1,27 @@
+{
+  "name": "beaches-seaker_basedgisproject",
+  "version": "1.0.0",
+  "description": "Beaches-Seaker -> web project based on GIS project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenTurg/Beaches-Seaker_basedGISproject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenTurg/Beaches-Seaker_basedGISproject/issues"
+  },
+  "homepage": "https://github.com/BenTurg/Beaches-Seaker_basedGISproject#readme",
+  "dependencies": {
+    "firebase": "^9.22.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1"
+  }
+}

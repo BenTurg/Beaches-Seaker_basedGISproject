@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "export_html_11.5.23_16.00/qgis2web_2023_05_11-15_30_42_882962",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
