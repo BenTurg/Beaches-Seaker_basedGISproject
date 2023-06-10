@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="./css/navbar.css">
+<script src="./js/navbar.js"></script>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  /* text-align: center; */
+  /* background-color: #474e5d; */
+  color: #777;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      /* background-color: #f9f9f9; */
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 28px;
+      margin: 0;
+    }
+
+    h2 {
+      color: #555;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #777;
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #f9f9f9;
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer p {
+      color: #777;
+      font-size: 14px;
+      margin: 0;
+    }
+    /* Style 7
+   ----------------------------- */
+    .seven h1 {
+    text-align: center;
+        font-size:30px; font-weight:300; color:#222; letter-spacing:1px;
+        text-transform: uppercase;
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+    }
+
+    .seven h1:after,.seven h1:before {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #359ff1;
+        border-top: 1px solid #359ff1;
+        height: 5px;
+      background-color:#f8f8f8;
+    }
+  </style>
+</head>
+<body>
+    <div id="nav_div">
+        <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
+        <nav id="navbar" class="">
+          <div class="nav-wrapper">
+            <!-- Navbar Logo -->
+            <div class="logo">
+              <!-- Logo Placeholder for Illustration -->
+              <!-- <a href="#home"><img width="100px" height="auto" src="https://www.codepel.com/wp-content/uploads/2023/01/CodePel-Logo-2.1.png"></a> -->
+              <a href="index.html"><img width="100px" height="auto" src="./img/small_logo.png"></a>
+            </div>
+        
+            <!-- Navbar Links -->
+            <ul id="menu">
+              <li><a href="index.html">Home</a></li><!--
+           --><li><a href="about.html">About</a></li><!--
+           --><li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+
+        <!-- Menu Icon -->
+        <div class="menuIcon">
+          <span class="icon icon-bars"></span>
+          <span class="icon icon-bars overlay"></span>
+        </div>
+        <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
+    </div>
+
+    <div class="about-section">
+        <header>
+            <div class="seven">
+                <h1>Welcome to Seaker</h1>
+            </div>
+        </header>
+    
+        <main>
+          <section>
+            <h2>Our Mission</h2>
+            <p>At Seaker, we are passionate about providing you with comprehensive and up-to-date information about the world's most beautiful beaches. Whether you are a sun-seeking traveler, a dedicated surfer, or simply someone who appreciates the natural beauty of coastal areas, we are here to help you make the most of your beach adventures.</p>
+            <p>Our mission is to be your go-to resource for all things beach-related. We strive to deliver accurate, reliable, and detailed information that empowers you to explore, enjoy, and protect our precious coastal environments. We believe that by sharing knowledge about beaches, we can foster a greater understanding of their importance and encourage responsible beach tourism.</p>
+          </section>
+        
+          <section>
+            <h2>What We Offer</h2>
+            <ul>
+              <li>Beach Profiles: Discover in-depth profiles of beaches around the world, including location details, amenities, water conditions, and nearby attractions.</li>
+              <li>Real-Time Weather Updates: Stay informed about current weather conditions at your favorite beaches.</li>
+              <li>Water Quality Reports: Access regular water quality reports to make informed decisions about water-related activities.</li>
+              <li>Beach Reviews and Ratings: Share and read reviews from fellow beach enthusiasts.</li>
+              <li>Interactive Maps: Navigate beaches like a pro with our interactive maps.</li>
+              <li>Beach Conservation Resources: Access resources and articles on beach conservation and eco-friendly practices.</li>
+            </ul>
+          </section>
+        
+          <section>
+            <h2>Why Choose Seaker?</h2>
+            <ul>
+              <li>Accuracy: We strive for accuracy and constantly update our information to provide you with the most reliable data available.</li>
+              <li>Comprehensive Coverage: Our extensive database covers beaches from popular tourist hotspots to hidden gems.</li>
+              <li>User-Friendly Interface: Our website is designed to be user-friendly and intuitive.</li>
+              <li>Community-Driven Platform: Join our community of passionate beach lovers, share your experiences, and contribute to the collective knowledge.</li>
+            </ul>
+          </section>
+        
+          <section>
+            <h2>Start Exploring with Seaker</h2>
+            <p>We invite you to dive into the world of Seaker and embark on an unforgettable beach journey. Whether you're seeking relaxation, adventure, or simply a connection with nature, our website is here to guide you every step of the way.</p>
+            <p>Join us today and discover the beauty of beaches like never before!</p>
+          </section>
+        </main>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="./img/Amit.jpeg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Amit Aviv</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>amitaviv450@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="./img/Lior.jpeg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Lior Silman</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mike@example.com</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="./img/Ben.jpeg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Ben Turgeman</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Seaker. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

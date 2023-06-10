@@ -7,16 +7,61 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css">
-        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+
+        <link rel="stylesheet" href="./css/navbar.css">
+        <script src="./js/navbar.js"></script>
+
         <style>
         #map {
-            width: 1212px;
-            height: 856px;
+            width: 1500px;
+            height: 690px;
+            /* z-index: -1; */
+            /* padding: auto; */
+            top: 50px;
         }
         </style>
-        <title></title>
+        <title>Seaker</title>
     </head>
     <body>
+        <div id="nav_div">
+        <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
+        <nav id="navbar" class="">
+          <div class="nav-wrapper">
+            <!-- Navbar Logo -->
+            <div class="logo">
+              <!-- Logo Placeholder for Illustration -->
+              <!-- <a href="#home"><img width="100px" height="auto" src="https://www.codepel.com/wp-content/uploads/2023/01/CodePel-Logo-2.1.png"></a> -->
+              <a href="index.html"><img width="100px" height="auto" src="./img/small_logo.png"></a>
+            </div>
+        
+            <!-- Navbar Links -->
+            <ul id="menu">
+              <li><a href="index.html">Home</a></li><!--
+           --><li><a href="about.html">About</a></li><!--
+           --><li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+
+        <!-- Menu Icon -->
+        <div class="menuIcon">
+          <span class="icon icon-bars"></span>
+          <span class="icon icon-bars overlay"></span>
+        </div>
+        <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
+    </div>
+
+<div class="overlay-menu">
+  <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
