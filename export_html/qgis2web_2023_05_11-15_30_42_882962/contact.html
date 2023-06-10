@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <title>Page Title</title> -->
+<link rel="stylesheet" href="./css/navbar.css">
+<script src="./js/navbar.js"></script>
+
+<link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+
+    <div id="nav_div">
+        <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
+        <nav id="navbar" class="">
+          <div class="nav-wrapper">
+            <!-- Navbar Logo -->
+            <div class="logo">
+              <!-- Logo Placeholder for Illustration -->
+              <!-- <a href="#home"><img width="100px" height="auto" src="https://www.codepel.com/wp-content/uploads/2023/01/CodePel-Logo-2.1.png"></a> -->
+              <a href="index.html"><img width="100px" height="auto" src="./img/small_logo.png"></a>
+            </div>
+        
+            <!-- Navbar Links -->
+            <ul id="menu">
+              <li><a href="index.html">Home</a></li><!--
+           --><li><a href="about.html">About</a></li><!--
+           --><li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+
+        <!-- Menu Icon -->
+        <div class="menuIcon">
+          <span class="icon icon-bars"></span>
+          <span class="icon icon-bars overlay"></span>
+        </div>
+        
+    
+
+    <div class="overlay-menu">
+      <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+<!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
+
+    <div class="contact-us">
+        <form action="#">
+          <label for="customerName">NAME <em>&#x2a;</em></label>
+          <input id="customerName" name="customerName" required="" type="text" />
+          <label for="customerEmail">EMAIL <em>&#x2a;</em></label>
+          <input id="customerEmail" name="customerEmail" required="" type="email" />
+          <label for="customerPhone">PHONE</label>
+          <input id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" />
+          <label for="orderNumber">ORDER NUMBER</label><input id="orderNumber" name="orderNumber" type="text" />
+          <label for="customerNote">YOUR MESSAGE <em>&#x2a;</em></label>
+          <textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
+          <h3>
+            Please provide all the information about your issue you can.
+          </h3>
+          <button id="customerOrder">SUBMIT</button>
+        </form>
+      </div>
+
+</body>
+</html>
