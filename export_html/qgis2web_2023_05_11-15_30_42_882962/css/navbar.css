@@ -174,6 +174,7 @@
       width: 20px;
       -webkit-transition: 0.4s;
       transition: 0.4s;
+      z-index: 12;
     } 
   
     .icon-bars::before {
@@ -303,6 +304,7 @@
     height: 100vh;
     -webkit-transition: transform 0.2s ease-out;
     transition: transform 0.2s ease-out;
+    /* z-index: 1; */
   }
   
   .overlay-menu ul, .overlay-menu li {
@@ -320,7 +322,7 @@
     text-transform: uppercase;
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
-  /*   -webkit-transition: 0.2s opacity 0.2s ease-out;
+    /* -webkit-transition: 0.2s opacity 0.2s ease-out;
     transition: 0.2s opacity 0.2s ease-out; */
   }
   

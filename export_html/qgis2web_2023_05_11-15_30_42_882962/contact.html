@@ -3,7 +3,7 @@
 <head>
 <!-- <title>Page Title</title> -->
 <link rel="stylesheet" href="./css/navbar.css">
-<script src="./js/navbar.js"></script>
+<!-- <script src="./js/navbar.js"></script> -->
 
 <link rel="stylesheet" href="./css/contact.css">
 </head>
@@ -36,7 +36,7 @@
           <span class="icon icon-bars overlay"></span>
         </div>
         
-    
+    </div>
 
     <div class="overlay-menu">
       <ul id="menu">
@@ -45,7 +45,6 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-</div>
 <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
 
     <div class="contact-us">
@@ -56,7 +55,6 @@
           <input id="customerEmail" name="customerEmail" required="" type="email" />
           <label for="customerPhone">PHONE</label>
           <input id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" />
-          <label for="orderNumber">ORDER NUMBER</label><input id="orderNumber" name="orderNumber" type="text" />
           <label for="customerNote">YOUR MESSAGE <em>&#x2a;</em></label>
           <textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
           <h3>
@@ -66,5 +64,36 @@
         </form>
       </div>
 
+      <script>
+        // Navigation
+        // Responsive Toggle Navigation =============================================
+        let menuIcon = document.querySelector('.menuIcon');
+        let nav = document.querySelector('.overlay-menu');
+        let contactUs = document.querySelector('.contact-us');
+    
+        menuIcon.addEventListener('click', () => {
+            if (nav.style.transform != 'translateX(0%)') {
+                nav.style.transform = 'translateX(0%)';
+                nav.style.transition = 'transform 0.2s ease-out';
+            } else { 
+                nav.style.transform = 'translateX(-100%)';
+                nav.style.transition = 'transform 0.2s ease-out';
+            }
+        });
+    
+    
+        // Toggle Menu Icon ========================================
+        let toggleIcon = document.querySelector('.menuIcon');
+    
+        toggleIcon.addEventListener('click', () => {
+            if (toggleIcon.className != 'menuIcon toggle') {
+                toggleIcon.className += ' toggle';
+                contactUs.style.display = 'none';
+            } else {
+                toggleIcon.className = 'menuIcon';
+                contactUs.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>

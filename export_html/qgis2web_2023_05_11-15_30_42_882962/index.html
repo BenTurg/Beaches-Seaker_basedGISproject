@@ -11,24 +11,26 @@
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
 
         <link rel="stylesheet" href="./css/navbar.css">
-        <script src="./js/navbar.js"></script>
+        <!-- <script src="./js/navbar.js"></script> -->
+        <link rel="stylesheet" href="./css/moreInfoBtn.css">
 
         <style>
         #map {
             width: 1500px;
             height: 690px;
-            /* z-index: -1; */
-            /* padding: auto; */
+            padding: auto;
             top: 50px;
+            right: 5px;
         }
         </style>
         <title>Seaker</title>
+        <link rel="icon" type="image/x-icon" href="./img/Logo.png">
     </head>
     <body>
         <div id="nav_div">
         <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
         <nav id="navbar" class="">
-          <div class="nav-wrapper">
+          <div class="nav-wrapper" style="right: 10px;">
             <!-- Navbar Logo -->
             <div class="logo">
               <!-- Logo Placeholder for Illustration -->
@@ -61,7 +63,6 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-
 <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
         <div id="map">
         </div>
@@ -180,10 +181,34 @@
                     <th scope="row">דירוג</th>\
                     <td>' + autolinker.link(feature.properties['beaches_rating'].toLocaleString()) + '</td>\
                 </tr>' : '') + '\
-                </table>';
+                </table>\
+                <button class="cta">\
+                    <span>More Info</span>\
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">\
+                        <path d="M1,5 L11,5"></path>\
+                        <polyline points="8 1 12 5 8 9"></polyline>\
+                    </svg>\
+                </button>';
             
             layer.bindPopup(popupContent, {maxHeight: 400});
-            }       
+
+            // layer.on('popupopen', function () {
+            //     var button = document.querySelector('.cta');
+            //     button.addEventListener('click', function () {
+            //         var additionalInfo = 'Additional information about the beach goes here.'; // Replace with the actual additional information
+            //         layer.closePopup();
+            //         layer.unbindPopup();
+            //         layer.bindPopup('<p>' + additionalInfo + '</p><button class="back">Back</button>', {maxHeight: 400}).openPopup();
+            //     });
+            
+            //     var backBtn = document.querySelector('.back');
+            //     backBtn.addEventListener('click', function () {
+            //         layer.closePopup();
+            //         layer.unbindPopup();
+            //         layer.bindPopup(popupContent, {maxHeight: 400}).openPopup();
+            //     });
+            // });
+        }       
 
         function style_hofim032023_1_0() {
             return {
@@ -225,6 +250,38 @@
         map.on("layerremove", function(){
             resetLabels([layer_hofim032023_1]);
         });
+        </script>
+
+        <script>
+            // Navigation
+            // Responsive Toggle Navigation =============================================
+            let menuIcon = document.querySelector('.menuIcon');
+            let nav = document.querySelector('.overlay-menu');
+            let mapElement = document.getElementById('map');
+    
+            menuIcon.addEventListener('click', () => {
+                if (nav.style.transform != 'translateX(0%)') {
+                    nav.style.transform = 'translateX(0%)';
+                    nav.style.transition = 'transform 0.2s ease-out';
+                } else { 
+                    nav.style.transform = 'translateX(-100%)';
+                    nav.style.transition = 'transform 0.2s ease-out';
+                }
+            });
+    
+    
+            // Toggle Menu Icon ========================================
+            let toggleIcon = document.querySelector('.menuIcon');
+    
+            toggleIcon.addEventListener('click', () => {
+                if (toggleIcon.className != 'menuIcon toggle') {
+                    toggleIcon.className += ' toggle';
+                    mapElement.style.display = 'none';
+                } else {
+                    toggleIcon.className = 'menuIcon';
+                    mapElement.style.display = 'block';
+                }
+            });
         </script>
     </body>
 </html>

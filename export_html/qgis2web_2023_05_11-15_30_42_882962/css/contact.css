@@ -10,7 +10,7 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  display: grid;
+  /* display: grid; */
   align-items: center;
   justify-items: center;
   font-size: 12pt;
@@ -19,13 +19,20 @@ body {
 }
 
 .contact-us {
-    /* margin-top: 50px; */
   background: #e5f2f8;
   padding: 50px 100px;
   border-top: 10px solid #21aaff;
   border-radius: 10px;
   position: relative;
-  top: 30px;
+  top: 75px;
+  width: 40vw;
+    margin-left: 25vw;
+}
+@media(max-width: 768px) {
+    .contact-us {
+        margin-left: 10vw;
+        top: 75px;
+    }
 }
 
 label, input, textarea {
