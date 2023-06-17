@@ -40,9 +40,9 @@
         
             <!-- Navbar Links -->
             <ul id="menu">
-              <li><a href="index.html">Home</a></li><!--
-           --><li><a href="about.html">About</a></li><!--
-           --><li><a href="contact.html">Contact</a></li>
+              <li><a href="index.html">דף הבית</a></li><!--
+           --><li><a href="about.html">קצת עלינו</a></li><!--
+           --><li><a href="contact.html">צור קשר</a></li>
             </ul>
           </div>
         </nav>
@@ -58,9 +58,9 @@
 
     <div class="overlay-menu">
       <ul id="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">דף הבית</a></li>
+          <li><a href="about.html">קצת עלינו</a></li>
+          <li><a href="contact.html">צור קשר</a></li>
         </ul>
     </div>
 <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
@@ -99,6 +99,44 @@
         });
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
+
+        //run the script every minute @@@@@@@@@@@@@@@
+        function runScript() {
+          // Your script code goes here
+          console.log("Script executed!");
+        }
+    
+        function checkTimeAndRunScript() {
+          runScript();
+        }
+    
+        // Check the time every minute
+        setInterval(checkTimeAndRunScript, 60000);
+        //end of run the script every minute @@@@@@@@@@@@@@@
+        
+        //get scraped data from json file @@@@@@@@@@@@@@@
+
+        window.addEventListener('DOMContentLoaded', function() {
+            // Fetch the JSON data
+            fetch('../../scrapping/scrapping/json_output_files/tel_aviv_output.json')
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    // Convert the JSON data to a string
+                    var jsonDataString = JSON.stringify(data);
+                
+                    // Display the JSON data string in the HTML element
+                    // var jsonDataElement = document.getElementById('json-data');
+                    // jsonDataElement.textContent = jsonDataString;
+                    console.log(jsonDataString);
+                })
+                .catch(function(error) {
+                    console.log('Error:', error);
+                });
+        });
+        //end of get scraped data from json file @@@@@@@@@@@@@@@
+
         function pop_hofim032023_1(feature, layer) {
             var popupContent = '<table>\
                 ' + (feature.properties['AZIMUTH'] !== null ? '<tr>\
@@ -192,22 +230,22 @@
             
             layer.bindPopup(popupContent, {maxHeight: 400});
 
-            // layer.on('popupopen', function () {
-            //     var button = document.querySelector('.cta');
-            //     button.addEventListener('click', function () {
-            //         var additionalInfo = 'Additional information about the beach goes here.'; // Replace with the actual additional information
-            //         layer.closePopup();
-            //         layer.unbindPopup();
-            //         layer.bindPopup('<p>' + additionalInfo + '</p><button class="back">Back</button>', {maxHeight: 400}).openPopup();
-            //     });
+            layer.on('popupopen', function () {
+                var button = document.querySelector('.cta');
+                button.addEventListener('click', function () {
+                    var additionalInfo = 'Additional information about the beach goes here.'; // Replace with the actual additional information
+                    layer.closePopup();
+                    layer.unbindPopup();
+                    layer.bindPopup('<p>' + additionalInfo + '</p><button class="back">Back</button>', {maxHeight: 400}).openPopup();
+                });
             
-            //     var backBtn = document.querySelector('.back');
-            //     backBtn.addEventListener('click', function () {
-            //         layer.closePopup();
-            //         layer.unbindPopup();
-            //         layer.bindPopup(popupContent, {maxHeight: 400}).openPopup();
-            //     });
-            // });
+                var backBtn = document.querySelector('.back');
+                backBtn.addEventListener('click', function () {
+                    layer.closePopup();
+                    layer.unbindPopup();
+                    layer.bindPopup(popupContent, {maxHeight: 400}).openPopup();
+                });
+            });
         }       
 
         function style_hofim032023_1_0() {
