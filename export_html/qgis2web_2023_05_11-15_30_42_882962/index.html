@@ -216,10 +216,13 @@
 
             layer.bindPopup(popupContent, { maxHeight: 400 });
             
+            var json_ouput_file_path = "../../scrapping/scrapping/json_output_files/tel_aviv_output.json"
+
             layer.on('popupopen', function () {
                 var json_ouput_file_path = "../../scrapping/scrapping/json_output_files/tel_aviv_output.json"
-
-                if (feature.properties['CITY'].toLocaleString() === 'תל אביב') {
+                if(feature.properties['CITY'])
+                {
+                    if (feature.properties['CITY'].toLocaleString() === 'תל אביב') {
                     json_ouput_file_path = "../../scrapping/scrapping/json_output_files/tel_aviv_output.json"
                     console.log("tel aviv");
                 } else if (feature.properties['CITY'].toLocaleString() === "בת ים") {
@@ -234,11 +237,17 @@
                 } else if (feature.properties['CITY'].toLocaleString() === "ראשון לציון") {
                     json_ouput_file_path = "../../scrapping/scrapping/json_output_files/rishon_letizon_output.json"
                     console.log("rishon lezion");
-                } else {
+                }
+                else if(!feature.properties['CITY'].toLocaleString()){
+                    json_ouput_file_path = "../../scrapping/scrapping/json_output_files/tel_aviv_output.json";
+                    console.log("error: tel aviv chosen by default");
+                }
+                 else {
                     json_ouput_file_path = "../../scrapping/scrapping/json_output_files/tel_aviv_output.json"
                     console.log("error: tel aviv chosen by default");
                 }
-
+                
+            }
 
 
 
