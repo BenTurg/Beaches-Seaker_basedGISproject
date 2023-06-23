@@ -1,20 +1,21 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="css/leaflet.css">
-        <link rel="stylesheet" href="css/qgis2web.css">
-        <link rel="stylesheet" href="css/fontawesome-all.min.css">
 
-        <link rel="stylesheet" href="./css/navbar.css">
-        <!-- <script src="./js/navbar.js"></script> -->
-        <link rel="stylesheet" href="./css/moreInfoBtn.css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/qgis2web.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
 
-        <style>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <!-- <script src="./js/navbar.js"></script> -->
+    <link rel="stylesheet" href="./css/moreInfoBtn.css">
+
+    <style>
         #map {
             width: 1500px;
             height: 690px;
@@ -22,67 +23,70 @@
             top: 50px;
             right: 5px;
         }
-        </style>
-        <title>Seaker</title>
-        <link rel="icon" type="image/x-icon" href="./img/Logo.png">
-    </head>
-    <body>
-        <div id="nav_div">
+    </style>
+    <title>Seaker</title>
+    <link rel="icon" type="image/x-icon" href="./img/Logo.png">
+</head>
+
+<body>
+    <div id="nav_div">
         <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
         <nav id="navbar" class="">
-          <div class="nav-wrapper" style="right: 10px;">
-            <!-- Navbar Logo -->
-            <div class="logo">
-              <!-- Logo Placeholder for Illustration -->
-              <!-- <a href="#home"><img width="100px" height="auto" src="https://www.codepel.com/wp-content/uploads/2023/01/CodePel-Logo-2.1.png"></a> -->
-              <a href="index.html"><img width="100px" height="auto" src="./img/small_logo.png"></a>
+            <div class="nav-wrapper" style="right: 10px;">
+                <!-- Navbar Logo -->
+                <div class="logo">
+                    <!-- Logo Placeholder for Illustration -->
+                    <!-- <a href="#home"><img width="100px" height="auto" src="https://www.codepel.com/wp-content/uploads/2023/01/CodePel-Logo-2.1.png"></a> -->
+                    <a href="index.html"><img width="100px" height="auto" src="./img/small_logo.png"></a>
+                </div>
+
+                <!-- Navbar Links -->
+                <ul id="menu">
+                    <li><a href="index.html">דף הבית</a></li><!--
+           -->
+                    <li><a href="about.html">קצת עלינו</a></li><!--
+           -->
+                    <li><a href="contact.html">צור קשר</a></li>
+                </ul>
             </div>
-        
-            <!-- Navbar Links -->
-            <ul id="menu">
-              <li><a href="index.html">דף הבית</a></li><!--
-           --><li><a href="about.html">קצת עלינו</a></li><!--
-           --><li><a href="contact.html">צור קשר</a></li>
-            </ul>
-          </div>
         </nav>
 
 
         <!-- Menu Icon -->
         <div class="menuIcon">
-          <span class="icon icon-bars"></span>
-          <span class="icon icon-bars overlay"></span>
+            <span class="icon icon-bars"></span>
+            <span class="icon icon-bars overlay"></span>
         </div>
-        
+
     </div>
 
     <div class="overlay-menu">
-      <ul id="menu">
-          <li><a href="index.html">דף הבית</a></li>
-          <li><a href="about.html">קצת עלינו</a></li>
-          <li><a href="contact.html">צור קשר</a></li>
+        <ul id="menu">
+            <li><a href="index.html">דף הבית</a></li>
+            <li><a href="about.html">קצת עלינו</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
         </ul>
     </div>
-<!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
-        <div id="map">
-        </div>
-        <script src="js/qgis2web_expressions.js"></script>
-        <script src="js/leaflet.js"></script>
-        <script src="js/leaflet.rotatedMarker.js"></script>
-        <script src="js/leaflet.pattern.js"></script>
-        <script src="js/leaflet-hash.js"></script>
-        <script src="js/Autolinker.min.js"></script>
-        <script src="js/rbush.min.js"></script>
-        <script src="js/labelgun.min.js"></script>
-        <script src="js/labels.js"></script>
-        <script src="data/hofim032023_1.js"></script>
-        <script>
+    <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
+    <div id="map">
+    </div>
+    <script src="js/qgis2web_expressions.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.rotatedMarker.js"></script>
+    <script src="js/leaflet.pattern.js"></script>
+    <script src="js/leaflet-hash.js"></script>
+    <script src="js/Autolinker.min.js"></script>
+    <script src="js/rbush.min.js"></script>
+    <script src="js/labelgun.min.js"></script>
+    <script src="js/labels.js"></script>
+    <script src="data/hofim032023_1.js"></script>
+    <script>
         var map = L.map('map', {
-            zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[32.81198906667123,35.00831723092625],[32.84455581189334,35.05445980905125]]);
+            zoomControl: true, maxZoom: 28, minZoom: 1
+        }).fitBounds([[32.81198906667123, 35.00831723092625], [32.84455581189334, 35.05445980905125]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
-        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var autolinker = new Autolinker({ truncate: { length: 30, location: 'smart' } });
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
@@ -100,38 +104,24 @@
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
 
-        //run the script every minute @@@@@@@@@@@@@@@
-        function runScript() {
-          // Your script code goes here
-          console.log("Script executed!");
-        }
-    
-        function checkTimeAndRunScript() {
-          runScript();
-        }
-    
-        // Check the time every minute
-        setInterval(checkTimeAndRunScript, 60000);
-        //end of run the script every minute @@@@@@@@@@@@@@@
-        
-        //get scraped data from json file @@@@@@@@@@@@@@@
 
-        window.addEventListener('DOMContentLoaded', function() {
+        //get scraped data from json file @@@@@@@@@@@@@@@
+        window.addEventListener('DOMContentLoaded', function () {
             // Fetch the JSON data
             fetch('../../scrapping/scrapping/json_output_files/tel_aviv_output.json')
-                .then(function(response) {
+                .then(function (response) {
                     return response.json();
                 })
-                .then(function(data) {
+                .then(function (data) {
                     // Convert the JSON data to a string
                     var jsonDataString = JSON.stringify(data);
-                
+
                     // Display the JSON data string in the HTML element
                     // var jsonDataElement = document.getElementById('json-data');
                     // jsonDataElement.textContent = jsonDataString;
                     console.log(jsonDataString);
                 })
-                .catch(function(error) {
+                .catch(function (error) {
                     console.log('Error:', error);
                 });
         });
@@ -224,25 +214,93 @@
                     </svg>\
                 </button>';
 
-            layer.bindPopup(popupContent, {maxHeight: 400});
-
-            layer.on('popupopen', function () {
-                var button = document.querySelector('.cta');
-                button.addEventListener('click', function () {
-                    var additionalInfo = 'Additional information about the beach goes here.'; // Replace with the actual additional information
-                    layer.closePopup();
-                    layer.unbindPopup();
-                    layer.bindPopup('<p>' + additionalInfo + '</p><button class="back">Back</button>', {maxHeight: 400}).openPopup();
-                });
+            layer.bindPopup(popupContent, { maxHeight: 400 });
             
-                var backBtn = document.querySelector('.back');
-                backBtn.addEventListener('click', function () {
-                    layer.closePopup();
-                    layer.unbindPopup();
-                    layer.bindPopup(popupContent, {maxHeight: 400}).openPopup();
-                });
+            layer.on('popupopen', function () {
+                var json_ouput_file_path = "../../scrapping/scrapping/json_output_files/tel_aviv_output.json"
+
+                if (feature.properties['CITY'].toLocaleString() === 'תל אביב') {
+                    json_ouput_file_path = "../../scrapping/scrapping/json_output_files/tel_aviv_output.json"
+                    console.log("tel aviv");
+                } else if (feature.properties['CITY'].toLocaleString() === "בת ים") {
+                    json_ouput_file_path = "../../scrapping/scrapping/json_output_files/bat_yam_output.json"
+                    console.log("bat yam");
+                } else if (feature.properties['CITY'].toLocaleString() === "הרצליה") {
+                    json_ouput_file_path = "../../scrapping/scrapping/json_output_files/herzelia_output.json"
+                    console.log("herzelia");
+                } else if (feature.properties['CITY'].toLocaleString() === "נתניה") {
+                    json_ouput_file_path = "../../scrapping/scrapping/json_output_files/natanya_output.json"
+                    console.log("netanya");
+                } else if (feature.properties['CITY'].toLocaleString() === "ראשון לציון") {
+                    json_ouput_file_path = "../../scrapping/scrapping/json_output_files/rishon_letizon_output.json"
+                    console.log("rishon lezion");
+                } else {
+                    json_ouput_file_path = "../../scrapping/scrapping/json_output_files/tel_aviv_output.json"
+                    console.log("error: tel aviv chosen by default");
+                }
+
+
+
+
+
+                function readJSONFile(file, callback) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.overrideMimeType("application/json");
+                    xhr.open("GET", file, true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            callback(JSON.parse(xhr.responseText));
+                        }
+                    };
+                    xhr.send(null);
+                }
+
+                function updateText() {
+
+
+
+
+                    readJSONFile(json_ouput_file_path, function (data) {
+                        var outputDiv = document.getElementById("output");
+                        if (!outputDiv) {
+                            // Create a new outputDiv element
+                            outputDiv = document.createElement("div");
+                            outputDiv.id = "output";
+                            document.body.appendChild(outputDiv);
+                        }
+                        outputDiv.innerText =
+                            `גובה גלים: ${data.beaches_wave_height}\n
+                            טמפרטורת המים: ${data.beaches_water_temp}\n
+                            כיוון הרוח: ${data.beaches_wind_direction}\n
+                            מידע נוסף: ${data.beaches_extra}`;
+
+                        // Apply inline styles to the outputDiv element
+                        outputDiv.style.position = "fixed";
+                        outputDiv.style.top = "50%";
+                        outputDiv.style.left = "50%";
+                        outputDiv.style.transform = "translate(-50%, -50%)";
+                        outputDiv.style.width = "400px";
+                        outputDiv.style.backgroundColor = "#e6f3ff";
+                        outputDiv.style.border = "1px solid #99ccff";
+                        outputDiv.style.padding = "20px";
+                        outputDiv.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
+                        outputDiv.style.textAlign = "center";
+                        outputDiv.style.fontFamily = "Arial, sans-serif";
+                        outputDiv.style.fontSize = "16px";
+                        outputDiv.style.color = "#333";
+
+                        // Open a new popup window
+                        var popupWindow = window.open("", "_blank", "width=400,height=300");
+                        popupWindow.document.body.appendChild(outputDiv);
+                    });
+
+
+                }
+                var button = document.querySelector(".cta");
+                button.addEventListener("click", updateText);
+
             });
-        }       
+        }
 
         function style_hofim032023_1_0() {
             return {
@@ -252,7 +310,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(2,180,60,0.13333333333333333)',
@@ -275,47 +333,48 @@
         map.addLayer(layer_hofim032023_1);
         setBounds();
         resetLabels([layer_hofim032023_1]);
-        map.on("zoomend", function(){
+        map.on("zoomend", function () {
             resetLabels([layer_hofim032023_1]);
         });
-        map.on("layeradd", function(){
+        map.on("layeradd", function () {
             resetLabels([layer_hofim032023_1]);
         });
-        map.on("layerremove", function(){
+        map.on("layerremove", function () {
             resetLabels([layer_hofim032023_1]);
         });
-        </script>
+    </script>
 
-        <script>
-            // Navigation
-            // Responsive Toggle Navigation =============================================
-            let menuIcon = document.querySelector('.menuIcon');
-            let nav = document.querySelector('.overlay-menu');
-            let mapElement = document.getElementById('map');
-    
-            menuIcon.addEventListener('click', () => {
-                if (nav.style.transform != 'translateX(0%)') {
-                    nav.style.transform = 'translateX(0%)';
-                    nav.style.transition = 'transform 0.2s ease-out';
-                } else { 
-                    nav.style.transform = 'translateX(-100%)';
-                    nav.style.transition = 'transform 0.2s ease-out';
-                }
-            });
-    
-    
-            // Toggle Menu Icon ========================================
-            let toggleIcon = document.querySelector('.menuIcon');
-    
-            toggleIcon.addEventListener('click', () => {
-                if (toggleIcon.className != 'menuIcon toggle') {
-                    toggleIcon.className += ' toggle';
-                    mapElement.style.display = 'none';
-                } else {
-                    toggleIcon.className = 'menuIcon';
-                    mapElement.style.display = 'block';
-                }
-            });
-        </script>
-    </body>
+    <script>
+        // Navigation
+        // Responsive Toggle Navigation =============================================
+        let menuIcon = document.querySelector('.menuIcon');
+        let nav = document.querySelector('.overlay-menu');
+        let mapElement = document.getElementById('map');
+
+        menuIcon.addEventListener('click', () => {
+            if (nav.style.transform != 'translateX(0%)') {
+                nav.style.transform = 'translateX(0%)';
+                nav.style.transition = 'transform 0.2s ease-out';
+            } else {
+                nav.style.transform = 'translateX(-100%)';
+                nav.style.transition = 'transform 0.2s ease-out';
+            }
+        });
+
+
+        // Toggle Menu Icon ========================================
+        let toggleIcon = document.querySelector('.menuIcon');
+
+        toggleIcon.addEventListener('click', () => {
+            if (toggleIcon.className != 'menuIcon toggle') {
+                toggleIcon.className += ' toggle';
+                mapElement.style.display = 'none';
+            } else {
+                toggleIcon.className = 'menuIcon';
+                mapElement.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
 </html>
