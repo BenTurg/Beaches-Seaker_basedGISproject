@@ -32,10 +32,10 @@ jobs:
           
       - name: Commit changes
         env:
-          GITHUB_TOKEN: ${{ secrets.OUR_GIS_SECRET }}
+          GITHUB_TOKEN: ${{ secrets.BEN_SECRET }}
         run: |
-          git config --global user.email "GISbeaches2023@gmail.com"
-          git config --global user.name "LiorBenAmit"
+          git config --global user.email "Ben9371@gmail.com"
+          git config --global user.name "BenTurg"
           git add .
           git commit -m "GitHub Actions: automatically Update files"
           git push
