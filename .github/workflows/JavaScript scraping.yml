@@ -16,13 +16,16 @@ jobs:
         with:
           node-version: '14.x'
 
+      - name: Install Puppeteer
+        run: npm install puppeteer
+
       - name: Run scripts
         run: |
           node export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/scrapping_scripts/bat_yam_scrape.js
-          node /export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/scrapping_scripts/herzelia_scrape.js
-          node /export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/scrapping_scripts/natanya_scrape.js
-          node /export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/scrapping_scripts/rishon_letzion_scrape.js
-          node /export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/scrapping_scripts/tel_aviv_scrape.js
+          node export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/scrapping_scripts/herzelia_scrape.js
+          node export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/scrapping_scripts/natanya_scrape.js
+          node export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/scrapping_scripts/rishon_letzion_scrape.js
+          node export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/scrapping_scripts/tel_aviv_scrape.js
           
       - name: Commit changes
         run: |
