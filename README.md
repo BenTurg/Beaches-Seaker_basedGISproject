@@ -7,3 +7,5 @@ By
 Ben Turgeman
 Amit Aviv
 Lior Silman
+
+add GitHub Actions to update the project data
