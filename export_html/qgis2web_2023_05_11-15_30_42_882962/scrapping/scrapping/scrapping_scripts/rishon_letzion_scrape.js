@@ -112,7 +112,7 @@ async function scrapeWebsite() {
 
   // Write the data to a JSON file
   fs.writeFileSync(
-    "../json_output_files/rishon_letizon_output.json",
+    "export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/json_output_files/rishon_letizon_output.json",
     JSON.stringify(desiredObject, null, 2)
   );
 
