@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <title>Page Title</title> -->
+<link rel="stylesheet" href="./css/navbar.css">
+<!-- <script src="./js/navbar.js"></script> -->
+
+<link rel="stylesheet" href="./css/contact.css">
+
+<title>Seaker</title>
+<link rel="icon" type="image/x-icon" href="./img/Logo.png">
+</head>
+<body>
+
+    <div id="nav_div">
+        <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
+        <nav id="navbar" class="">
+          <div class="nav-wrapper">
+            <!-- Navbar Logo -->
+            <div class="logo">
+              <!-- Logo Placeholder for Illustration -->
+              <!-- <a href="#home"><img width="100px" height="auto" src="https://www.codepel.com/wp-content/uploads/2023/01/CodePel-Logo-2.1.png"></a> -->
+              <a href="index.html#9/32.1314/35.1782"><img width="100px" height="auto" src="./img/small_logo.png"></a>
+            </div>
+        
+            <!-- Navbar Links -->
+            <ul id="menu">
+              <li><a href="index.html#9/32.1314/35.1782">דף הבית</a></li><!--
+           --><li><a href="about.html">קצת עלינו</a></li><!--
+           --><li><a href="contact.html">צור קשר</a></li>
+            </ul>
+          </div>
+        </nav>
+
+
+        <!-- Menu Icon -->
+        <div class="menuIcon">
+          <span class="icon icon-bars"></span>
+          <span class="icon icon-bars overlay"></span>
+        </div>
+        
+    </div>
+
+    <div class="overlay-menu">
+      <ul id="menu">
+          <li><a href="index.html#9/32.1314/35.1782">דף הבית</a></li>
+          <li><a href="about.html">קצת עלינו</a></li>
+          <li><a href="contact.html">צור קשר</a></li>
+        </ul>
+    </div>
+<!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
+
+    <div class="contact-us">
+        <form action="#">
+          <label for="customerName">NAME <em>&#x2a;</em></label>
+          <input id="customerName" name="customerName" required="" type="text" />
+          <label for="customerEmail">EMAIL <em>&#x2a;</em></label>
+          <input id="customerEmail" name="customerEmail" required="" type="email" />
+          <label for="customerPhone">PHONE</label>
+          <input id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" />
+          <label for="customerNote">YOUR MESSAGE <em>&#x2a;</em></label>
+          <textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
+          <h3>
+            Please provide all the information about your issue you can.
+          </h3>
+          <button id="customerOrder">SUBMIT</button>
+        </form>
+      </div>
+
+      <script>
+        // Navigation
+        // Responsive Toggle Navigation =============================================
+        let menuIcon = document.querySelector('.menuIcon');
+        let nav = document.querySelector('.overlay-menu');
+        let contactUs = document.querySelector('.contact-us');
+    
+        menuIcon.addEventListener('click', () => {
+            if (nav.style.transform != 'translateX(0%)') {
+                nav.style.transform = 'translateX(0%)';
+                nav.style.transition = 'transform 0.2s ease-out';
+            } else { 
+                nav.style.transform = 'translateX(-100%)';
+                nav.style.transition = 'transform 0.2s ease-out';
+            }
+        });
+    
+    
+        // Toggle Menu Icon ========================================
+        let toggleIcon = document.querySelector('.menuIcon');
+    
+        toggleIcon.addEventListener('click', () => {
+            if (toggleIcon.className != 'menuIcon toggle') {
+                toggleIcon.className += ' toggle';
+                contactUs.style.display = 'none';
+            } else {
+                toggleIcon.className = 'menuIcon';
+                contactUs.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

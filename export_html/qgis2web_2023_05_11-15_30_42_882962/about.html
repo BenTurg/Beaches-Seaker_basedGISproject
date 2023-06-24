@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="./css/navbar.css">
+<!-- <script src="./js/navbar.js"></script> -->
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  /* text-align: center; */
+  /* background-color: #474e5d; */
+  color: #777;
+  /* background-image: url("./img/blue_wave_ocean_background.png"); */
+
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      /* background-color: #f9f9f9; */
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 28px;
+      margin: 0;
+    }
+
+    h2 {
+      color: #555;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #777;
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #f9f9f9;
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer p {
+      color: #777;
+      font-size: 14px;
+      margin: 0;
+    }
+    /* Style 7
+   ----------------------------- */
+    .seven h1 {
+    text-align: center;
+        font-size:30px; font-weight:300; color:#222; letter-spacing:1px;
+        text-transform: uppercase;
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+    }
+
+    .seven h1:after,.seven h1:before {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #359ff1;
+        border-top: 1px solid #359ff1;
+        height: 5px;
+      background-color:#f8f8f8;
+    }
+  </style>
+  
+  <title>Seaker</title>
+  <link rel="icon" type="image/x-icon" href="./img/Logo.png">
+</head>
+<body>
+    <div id="nav_div">
+        <!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
+        <nav id="navbar" class="">
+          <div class="nav-wrapper">
+            <!-- Navbar Logo -->
+            <div class="logo">
+              <!-- Logo Placeholder for Illustration -->
+              <!-- <a href="#home"><img width="100px" height="auto" src="https://www.codepel.com/wp-content/uploads/2023/01/CodePel-Logo-2.1.png"></a> -->
+              <a href="index.html#9/32.1314/35.1782"><img width="100px" height="auto" src="./img/small_logo.png"></a>
+            </div>
+        
+            <!-- Navbar Links -->
+            <ul id="menu">
+              <li><a href="index.html#9/32.1314/35.1782">דף הבית</a></li><!--
+           --><li><a href="about.html">קצת עלינו</a></li><!--
+           --><li><a href="contact.html">צור קשר</a></li>
+            </ul>
+          </div>
+        </nav>
+
+
+        <!-- Menu Icon -->
+        <div class="menuIcon">
+          <span class="icon icon-bars"></span>
+          <span class="icon icon-bars overlay"></span>
+        </div>
+    </div>
+
+    <div class="overlay-menu">
+      <ul id="menu">
+          <li><a href="index.html#9/32.1314/35.1782">דף הבית</a></li>
+          <li><a href="about.html">קצת עלינו</a></li>
+          <li><a href="contact.html">צור קשר</a></li>
+        </ul>
+    </div>
+<!-- @@@@@@@@@@ NavBar  @@@@@@@@@@ -->
+<div id="aboutAndTeam">
+  <div class="about-section">
+    <header>
+        <div class="seven">
+            <h1>Seaker ברוך הבא ל</h1>
+        </div>
+    </header>
+
+    <div style="text-align: center;">
+      <img src="./img/Logo.png" alt="Seaker Logo" width="200px" height="auto">
+    </div>
+
+    <main style="text-align: right; direction: rtl;">
+      <section>
+        <h2>המטרה שלנו</h2>
+        <p>בסיקר, אנו נלהבים לספק לך מידע מקיף ועדכני על החופים היפים בעולם. בין אם אתה מטייל שוחר שמש, גולש מסור, או פשוט מישהו שמעריך את היופי הטבעי של אזורי החוף, אנחנו כאן כדי לעזור לך להפיק את המרב מהרפתקאות החוף שלך.</p>
+        <p>המשימה שלנו היא להיות המשאב המומלץ שלך לכל מה שקשור לחוף. אנו שואפים לספק מידע מדויק, אמין ומפורט המאפשר לך לחקור, ליהנות ולהגן על סביבות החוף היקרה שלנו. אנו מאמינים שבאמצעות שיתוף ידע על חופים נוכל לטפח הבנה גדולה יותר של חשיבותם ולעודד תיירות חופים אחראית.</p>
+      </section>
+    
+      <section>
+        <h2>מה אנחנו מציעים</h2>
+        <ul>
+          <li>פרופילי חוף: גלה פרופילים מעמיקים של חופים ברחבי העולם, כולל פרטי מיקום, שירותים, תנאי מים ואטרקציות בקרבת מקום.</li>
+          <li>עדכוני מזג אוויר בזמן אמת: הישאר מעודכן לגבי תנאי מזג האוויר הנוכחיים בחופים המועדפים עליך.</li>
+          <li>דוחות איכות מים: גש לדוחות איכות מים קבועים כדי לקבל החלטות מושכלות לגבי פעילויות הקשורות למים.</li>
+          <li>חוות דעת ודירוגי חוף: שתף וקרא ביקורות של חובבי חופים אחרים.</li>
+          <li>מפות אינטראקטיביות: נווט בחופים כמו מקצוען עם המפות האינטראקטיביות שלנו.</li>
+          <li>משאבים לשימור חופים: גישה למשאבים ומאמרים על שימור חופים ושיטות עבודה ידידותיות לסביבה.</li>
+        </ul>
+      </section>
+    
+      <section>
+        <h2>למה לבחור בסיקר?</h2>
+        <ul>
+          <li>דיוק: אנו שואפים לדיוק ומעדכנים כל הזמן את המידע שלנו כדי לספק לך את הנתונים המהימנים ביותר הקיימים.</li>
+          <li>כיסוי מקיף: מסד הנתונים הנרחב שלנו מכסה חופים ממוקדי תיירות פופולריים ועד לאבני חן נסתרות.</li>
+          <li>ממשק ידידותי למשתמש: האתר שלנו נועד להיות ידידותי ואינטואיטיבי למשתמש.</li>
+          <li>פלטפורמה מונעת קהילה: הצטרף לקהילה שלנו של אוהבי חופים נלהבים, שתף את החוויות שלך ותרום לידע הקולקטיבי.</li>
+        </ul>
+      </section>
+    
+      <section>
+        <h2>התחל לחקור עם סיקר</h2>
+        <p>אנו מזמינים אתכם לצלול לתוך העולם של סיקר ולצאת למסע בלתי נשכח על החוף. בין אם אתם מחפשים רגיעה, הרפתקאות או פשוט חיבור עם הטבע, האתר שלנו כאן כדי להדריך אתכם בכל שלב.</p>
+        <p>הצטרפו אלינו עוד היום וגלו את היופי של החופים כמו שלא היה מעולם!</p>
+      </section>
+    </main>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+<div class="column">
+<div class="card">
+  <img src="./img/Amit.jpeg" alt="Jane" style="width:100%">
+  <div class="container">
+    <h2>Amit Aviv</h2>
+    <p class="title">סטודנט שנה ג' למדעי המחשב</p>
+    <p>amitaviv450@gmail.com</p>
+  </div>
+</div>
+</div>
+
+<div class="column">
+<div class="card">
+  <img src="./img/Lior.jpeg" alt="Mike" style="width:100%">
+  <div class="container">
+    <h2>Lior Silman</h2>
+    <p class="title">סטודנט שנה ג' למדעי המחשב</p>
+    <p>lior.silmansoad@gmail.com</p>
+  </div>
+</div>
+</div>
+
+<div class="column">
+<div class="card">
+  <img src="./img/Ben.jpeg" alt="John" style="width:100%;">
+  <div class="container">
+    <h2>Ben Turgeman</h2>
+    <p class="title">סטודנט שנה ג' למדעי המחשב</p>
+    <p>ben9371@gmail.com </p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Seaker. All rights reserved.</p>
+</footer>
+
+<script>
+  // Navigation
+  // Responsive Toggle Navigation =============================================
+  let menuIcon = document.querySelector('.menuIcon');
+  let nav = document.querySelector('.overlay-menu');
+  let aboutAndTeam = document.getElementById('aboutAndTeam');
+
+  menuIcon.addEventListener('click', () => {
+      if (nav.style.transform != 'translateX(0%)') {
+          nav.style.transform = 'translateX(0%)';
+          nav.style.transition = 'transform 0.2s ease-out';
+      } else { 
+          nav.style.transform = 'translateX(-100%)';
+          nav.style.transition = 'transform 0.2s ease-out';
+      }
+  });
+
+
+  // Toggle Menu Icon ========================================
+  let toggleIcon = document.querySelector('.menuIcon');
+
+  toggleIcon.addEventListener('click', () => {
+      if (toggleIcon.className != 'menuIcon toggle') {
+          toggleIcon.className += ' toggle';
+          aboutAndTeam.style.display = 'none';
+      } else {
+          toggleIcon.className = 'menuIcon';
+          aboutAndTeam.style.display = 'block';
+      }
+  });
+</script>
+
+</body>
+</html>
