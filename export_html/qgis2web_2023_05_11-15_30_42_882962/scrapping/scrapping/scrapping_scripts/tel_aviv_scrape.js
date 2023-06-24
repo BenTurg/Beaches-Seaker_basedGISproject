@@ -65,7 +65,7 @@ async function scrapedData() {
     // Write the output to a file
     const filePath = path.join(
       __dirname,
-      "../json_output_files/tel_aviv_output.json"
+      "export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/json_output_files/rishon_letizon_output.json",
     );
     fs.writeFile(filePath, output, (err) => {
       if (err) {
