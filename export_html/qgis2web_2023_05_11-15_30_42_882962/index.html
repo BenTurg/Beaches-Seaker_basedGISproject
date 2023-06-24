@@ -182,7 +182,7 @@
                     '<th scope="row" style="text-align: right;">הערות</th>' +
                     '</tr>' : '') +
                 (feature.properties['beaches_accessibility'] !== null ? '<tr>' +
-                    '<td>' + autolinker.link(feature.properties['beaches_accessibility'].toLocaleString()) + '</td>' +
+                    '<td>' + (feature.properties['beaches_accessibility'] == 'TRUE' ? '✔' : '✘')+ '</td>' +
                     '<th scope="row" style="text-align: right;">נגישות</th>' +
                     '</tr>' : '') +
                 (feature.properties['beaches_rating'] !== null ? '<tr>' +
