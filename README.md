@@ -95,6 +95,8 @@ Presented by:
 3. Ben Turgeman - ben9371@gmail.com
 
 URL to Seaker: https://beachesseaker.onrender.com 
+GitHub repository: https://github.com/BenTurg/Beaches-Seaker_basedGISproject
+YouTube video: https://www.youtube.com/watch?v=r7yijV1NBiQ
 Contact and business proposals : gisbeaches2023@gmail.com
 
 ------------------------------------------------------------------
