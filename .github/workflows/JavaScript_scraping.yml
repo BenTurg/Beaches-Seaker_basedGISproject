@@ -2,7 +2,9 @@ name: Run JavaScript scraping files every 6 hours -> update dynamic data
 
 on:
   schedule:
-    - cron:  '0 */6 * * *' # if needed -> for every 5 min: '*/5 * * * *'
+    - cron:  '*/5 * * * *'
+    # if needed for tests -> for every 5 min: '*/5 * * * *'
+    #                        for every 6 huors: '0 */6 * * *'
 
 jobs:
   run-scripts:
