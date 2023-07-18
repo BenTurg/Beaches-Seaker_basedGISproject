@@ -1,6 +1,5 @@
 # Seaker
 
-
 Seaker is a web application based on QGIS export to HTML and JavaScript.
 It allows users to explore the beautiful beaches of Israel through an interactive map.
 With Seaker, users can easily locate beaches across the country and access detailed information with just a click.
