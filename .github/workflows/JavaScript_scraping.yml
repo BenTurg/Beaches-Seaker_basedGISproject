@@ -32,12 +32,17 @@ jobs:
           node export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/scrapping_scripts/rishon_letzion_scrape.js
           node export_html/qgis2web_2023_05_11-15_30_42_882962/scrapping/scrapping/scrapping_scripts/tel_aviv_scrape.js
           
-      - name: Commit changes
+      - name: Commit changes if there are
         env:
           GITHUB_TOKEN: ${{ secrets.BEN_SECRET }}
         run: |
-          git config --global user.email "Ben9371@gmail.com"
-          git config --global user.name "BenTurg"
-          git add .
-          git commit -m "GitHub Actions: automatically Update files"
-          git push
+          if [[ -n $(git status -s) ]]; then
+            git config --global user.email "Ben9371@gmail.com"
+            git config --global user.name "BenTurg"
+            git add .
+            git commit -m "GitHub Actions: automatically Update files"
+            git push
+          else
+            echo "There are no changes to commit."
+          fi
+          
