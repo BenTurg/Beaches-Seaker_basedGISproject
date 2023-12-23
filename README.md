@@ -1,8 +1,8 @@
 # Seaker
 
 Seaker is a web application based on QGIS export to HTML and JavaScript.
-It allows users to explore the beautiful beaches of Israel through an interactive map.
-With Seaker, users can easily locate beaches across the country and access detailed information with just a click.
+It allows users to explore Israel's beautiful beaches through an interactive map.
+With Seaker, users can quickly locate beaches nationwide and access detailed information with just a click.
 
 ## Features
 
@@ -14,7 +14,7 @@ With Seaker, users can easily locate beaches across the country and access detai
 
 ## Target Audience
 
-Seaker is designed to cater to a diverse range of audiences including surfers, tourists, vacationers, divers, and more.
+Speaker is designed to cater to diverse audiences, including surfers, tourists, vacationers, divers, and more.
 The application provides valuable information to enhance the beach-going experience.
 
 ## Beach Information
@@ -38,14 +38,16 @@ Some of the upcoming features and live activities we aim to incorporate are:
 - Customizable filters and preferences
 - And many more options to enrich your beach experience
 
-## Open Source Project
+## Open Source Project - Contributions
 
-Seaker is an open source project, encouraging contributions from developers and enthusiasts alike.
+Speaker is an open-source project that encourages contributions from developers and enthusiasts alike.
 We welcome collaboration and appreciate any contributions to help make Seaker an even more powerful tool for beach exploration.
+If you find any bugs or suggestions for improvements, please open an issue on the GitHub repository.
+
 
 ## How to use
 
-To use Seaker, simply open the web application in your browser.
+To use Seaker, open the web application in your browser.
 URL: https://beachesseaker.onrender.com
 The map of Israel will be displayed, with marks on all the beaches in the country.
 Click on any beach to get details about it.
@@ -64,14 +66,6 @@ To run Seaker locally, follow these steps:
 3. Build and start the application: `npm start`
 4. python -m http.server 8080
 5. Open the application in your browser: `http://localhost:8080`
-
-
-Feel free to explore the codebase and make modifications as needed.
-
-## Contributions
-
-Seaker is an open source project, and contributions are welcome.
-If you find any bugs or have any suggestions for improvements, please open an issue on the GitHub repository.
 
 ## License
 
@@ -100,6 +94,6 @@ Presented by:
 
 - YouTube video: https://www.youtube.com/watch?v=r7yijV1NBiQ
 
-- Contact and business proposals : gisbeaches2023@gmail.com
+- Contact and business proposals: gisbeaches2023@gmail.com
 
 ------------------------------------------------------------------
